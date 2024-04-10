@@ -36,7 +36,7 @@ function getRandomInteger(max, min = 1) {
 function FillContent2div(type, number){
     var result = "";
     var innerStr = '<div class="c2">'
-                +'<div class="smallimg"><img src="%imgPath%"></div>'
+                +'<div class="smallimg"><img src="%imgPath%" onclick="alert(123)"></div>'
                 +'<div class="none1"></div>'
                 +'<div class="shop1">'
                 +    '<img src="imgs/ico/cart.png">'
@@ -45,7 +45,7 @@ function FillContent2div(type, number){
                 +    '</div>'
                 +'</div>'
                 +'</div> '
-                
+
     switch(type){
         case '1':
         break;
@@ -54,6 +54,7 @@ function FillContent2div(type, number){
                 result += innerStr.replace("%imgPath%",images[getRandomInteger(7)])
             }
     }
+    
     document.getElementById("conten2inner").innerHTML = result
 }
 
