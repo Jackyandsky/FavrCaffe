@@ -36,12 +36,12 @@ function getRandomInteger(max, min = 1) {
 function FillContent2div(type, number){
     var result = "";
     var innerStr = '<div class="c2">'
-                +'<div class="smallimg"><img src="%imgPath%" onclick="alert(123)"></div>'
+                +'<div class="smallimg"><img src="%imgPath%"></div>'
                 +'<div class="none1"></div>'
                 +'<div class="shop1">'
                 +    '<img src="imgs/ico/cart.png">'
                 +    '<div class="shop2">'
-                +        '<a href="#"><img src="imgs/ico/yellowcart.png"></a>'
+                +        '<a onclick="alert(123)"><img src="imgs/ico/yellowcart.png"></a>'
                 +    '</div>'
                 +'</div>'
                 +'</div> '
@@ -55,6 +55,93 @@ function FillContent2div(type, number){
             }
     }
     
+    document.getElementById("conten2inner").innerHTML = result
+}
+function SelectedChanged(){
+    var selectedFlavor = document.getElementById('Flavors').value
+    var result = "";
+    var iresult = 0
+    var innerStr = '<div class="c2">'
+                +'<div class="smallimg"><img src="%imgPath%"></div>'
+                +'<div class="none1"></div>'
+                +'<div class="shop1">'
+                +    '<img src="imgs/ico/cart.png">'
+                +    '<div class="shop2">'
+                +        '<a onclick="alert(%id%)"><img src="imgs/ico/yellowcart.png"></a>'
+                +    '</div>'
+                +'</div>'
+                +'</div> '
+    
+    coffeeBeans.forEach(function(item, index, array){
+        if (item.flavor.includes(selectedFlavor) && iresult < 6){
+            result += innerStr.replace("%imgPath%",images[getRandomInteger(7)]).replace("%id%",item.id)
+            iresult++
+        }
+    })
+    document.getElementById("conten2inner").innerHTML = result
+}
+function SelectedChangedForSort(){
+    var selectedFlavor = document.getElementById('Flavors').value
+    var sortCondition = document.getElementById('others').value
+    var newArr = []
+    var result = "";
+    var iresult = 0
+    var innerStr = '<div class="c2">'
+                +'<div class="smallimg"><img src="%imgPath%"></div>'
+                +'<div class="none1"></div>'
+                +'<div class="shop1">'
+                +    '<img src="imgs/ico/cart.png">'
+                +    '<div class="shop2">'
+                +        '<a onclick="alert(%id%)"><img src="imgs/ico/yellowcart.png"></a>'
+                +    '</div>'
+                +'</div>'
+                +'</div> '
+    
+    coffeeBeans.forEach(function(item, index, array){
+        if (item.flavor.includes(selectedFlavor) && iresult < 6){
+            newArr.push(item)
+            iresult++
+        }
+    })
+    switch(sortCondition){
+        case 'sellasc':
+            newArr.sort(function(a,b){
+                return a.soldQuantity < b.soldQuantity
+            })
+            break;
+        case 'selldes':
+            newArr.sort(function(a,b){
+                return a.soldQuantity > b.soldQuantity
+            })
+            break;
+        case 'priceasc':
+            newArr.sort(function(a,b){
+                return a.price < b.price
+            })
+            break;
+        case 'pricedes':
+            newArr.sort(function(a,b){
+                return a.price > b.price
+            })
+            break;
+        case 'stockasc':
+            newArr.sort(function(a,b){
+                return a.stock < b.stock
+            })
+            break;
+        case 'stockdes':
+            newArr.sort(function(a,b){
+                return a.stock > b.stock
+            })
+            break;
+    }
+    iresult = 0
+    newArr.forEach(function(item, index, array){
+        if (item.flavor.includes(selectedFlavor) && iresult < 6){
+            result += innerStr.replace("%imgPath%",images[getRandomInteger(7)]).replace("%id%",item.id)
+            iresult++
+        }
+    })
     document.getElementById("conten2inner").innerHTML = result
 }
 

@@ -176,7 +176,26 @@
                         <a href="#">Shop</a>
                     </div>
                     <div class="smalltext">
-                        <a onclick="FillContent2div()">New</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Presold</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Popular</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">More</a>
+                        <label style="color: brown;">Filter By</label>&nbsp;&nbsp;<a onclick="FillContent2div()">Random</a>&nbsp;&nbsp;|
+						<label style="color: brown;" for="fruit">By Flavor:</label>
+						<select id="Flavors" onchange="SelectedChanged()">
+							<option value="acidic">acidic</option>
+							<option value="smooth">smooth</option>
+							<option value="sweet">sweet</option>
+							<option value="robust">robust</option>
+							<option value="strong">strong</option>
+						</select>
+						<label style="color: brown;" for="others">Sort By Condition:</label>
+						<select id="others" onchange="SelectedChangedForSort()">
+							<option value="sellasc">Sell ASC</option>
+							<option value="selldes">Sell DES</option>
+							<option value="priceasc">Price ASC</option>
+							<option value="pricedes">Price DES</option>
+							<option value="stockasc">Stock ASC</option>
+							<option value="stockdes">Stock DES</option>
+						</select>
+						<!-- |&nbsp;&nbsp;<a onclick="FillContent2div()">Presold</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="FillContent2div()">Popular</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="FillContent2div()">More</a> -->
+						
                     </div>
                     <div class="c3">
                         <a href="#"><img class="longimg" src="imgs/goods/promo_italianstyle.png"></a>
