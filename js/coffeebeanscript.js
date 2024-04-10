@@ -74,7 +74,7 @@ function SelectedChanged(){
     
     coffeeBeans.forEach(function(item, index, array){
         if (item.flavor.includes(selectedFlavor) && iresult < 6){
-            result += innerStr.replace("%imgPath%",images[getRandomInteger(7)]).replace("%id%",item.id)
+            result += innerStr.replace("%imgPath%",images[getRandomInteger(7)]).replace("%id%",item.name)
             iresult++
         }
     })
