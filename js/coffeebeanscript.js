@@ -145,12 +145,11 @@ function SelectedChangedForSort(){
     document.getElementById("conten2inner").innerHTML = result
 }
 function SubmitFeedBack(){
-    alert(123)
     var user = document.getElementById("name").value
     var email = document.getElementById("email").value
     var feedback = document.getElementById("feedback").value
     var message = "Thank you for your FeedBack " + user + "\n" 
-    + "Your concern is our best encourage."
+    + "Your concern is our best encouragement."
     alert(message)
     return
 }
