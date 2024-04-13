@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FavrCaffe</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="icon.png">
+    <link href="styles/login.css" rel="stylesheet" type="text/css">
+    <link href="styles/absolute.css" rel="stylesheet" type="text/css">
+    <link href="styles/banner.css" rel="stylesheet" type="text/css">
+    <link href="styles/radius.css" rel="stylesheet" type="text/css">
+    <link href="styles/content.css" rel="stylesheet" type="text/css">
+    <link href="styles/music.css" rel="stylesheet" type="text/css">
+    <link href="styles/content2.css" rel="stylesheet" type="text/css">
+    <link href="styles/footer.css" rel="stylesheet" type="text/css">
+    <link href="styles/flickerplate.css" rel="stylesheet" type="text/css">
+    <script src="js/min/jquery-v1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/min/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+	<script src="js/coffeebeanscript.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.flicker-example').flicker();
+        });
+    </script>
+</head>
+<body>
+    <div id="huanfu">
+        <div id="container">
+            <div id="header">
+                <div class="logo">
+                    <a href="index.html"><img src="imgs/ico/icon.png" height="71px"></a>
+                </div>
+                <div class="login">
+                    <ul id="nav">
+                        <li class="li1"><a href="#"><img src="imgs/ico/search.png" height="23px"></a><input class="input1" type="text" name="userName" size="15" maxlength="15" value="Search Your Favor" /> </li>
+                        <li><a href="#"><img src="imgs/ico/login.png" height="23px"></a></li>
+                        <li><a href="#"><img src="imgs/ico/client.png" height="23px"></a>
+                            <ul>
+                                <li><img src="imgs/ico/client.png" height="150px"></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="imgs/ico/upload.png" height="23px"></a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <!--Navigate-->
+                    <ul>
+                        <li><a href="index.html" class="text1">Home</a></li>
+                        <!--<li><a href="#">Resource</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Rank List</a></li>
+                        <li><a href="#">Feedback</a></li>-->
+                    </ul>
+                </div>
+                <div class="abc">
+                </div>
+            </div>
+            <div id="banner">
+                <div class="white">
+                </div>
+                <div class="flicker-example" data-block-text="false">
+                    <ul class="weizhi">
+                        <li data-background="imgs/banner/whole-bean-blends_banner_2048x.jpg"></li>
+                        <li data-background="imgs/banner/wholesale_2048x.jpg"></li>
+                        <li data-background="imgs/banner/allegra-macchina-capsule-oro-caf_2048x.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <div id="content1">
+                    <div class="bigtext">
+                        <a>Feedback</a>
+                    </div>
+                    <p>
+                        
+                    </p>
+                    <div class="formfeedback">
+                        <form action="" method="post">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name"><br>
+                    
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                    
+                            <label for="feedback">Feedback:</label><br><br>
+                            <textarea id="feedback" name="feedback" rows="10" cols="40"></textarea><br>
+                    
+                            <input type="submit" value="Submit" onclick="SubmitFeedBack()">
+                        </form>
+                    </div>
+                    <div class="display">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+                <!-- <div id="content2">
+                    
+                </div> -->
+            </div>
+        </div>
+        <div id="footer2">
+            <a href="#">About</a> |
+            <a href="#">Contact</a> |
+            <a href="#">Disclaimer</a> |
+            <a href="#">Link</a> |
+            <a href="#">Copyright</a>
+            <p>
+            <p><a href="mailto:jackyandsky@gmail.com">jackyandsky@gmail.com</a>
+            </p>
+
+        </div>
+        <div id="absolute1" align="center">
+            <!--rightsidereaction-->
+            <div class="abs">
+                <img src="imgs/ico/feedback.png" width="35px"><a href="/feedback.html">
+                    <p>Feedback</p>
+                </a>
+            </div>
+            <div class="abs">
+                <img src="imgs/ico/pc.png" width="35px"><a href="#">
+                    <p>PC</p>
+                </a>
+            </div>
+            <div class="abs">
+                <img src="imgs/ico/client.png" width="35px"><a href="#">
+                    <p>APP</p>
+                </a>
+            </div>
+            <div class="abs">
+                <img src="imgs/ico/download.png" width="35px"><a href="#">
+                    <p>Fast</p>
+                </a>
+            </div>
+        </div>
+        <div id="absolute2">
+            <a href="index.html"><img src="imgs/ico/rocket-icon.png" width="60px"></a>
+            <!--backtothetop-->
+        </div>
+    </div>
+	<script>
+		document.addEventListener('DOMContentLoaded', FillContent2div())
+	</script>
+</body>
+</html>

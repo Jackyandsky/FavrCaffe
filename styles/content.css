@@ -22,6 +22,16 @@
 	position:relative;
 	
 }
+#content1 .formfeedback {
+	text-align: center; 
+	margin-top: 20px;
+}
+#content1 .formfeedback input{
+	background:#d3cbcb;
+}
+#content1 .formfeedback textarea{
+	background:#d3cbcb;
+}
 #content1 img
 {
 	width:180px;
