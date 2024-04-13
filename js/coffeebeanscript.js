@@ -151,6 +151,8 @@ function SubmitFeedBack(){
     var message = "Thank you for your FeedBack " + user + "\n" 
     + "Your concern is our best encouragement."
     alert(message)
+    event.preventDefault()
+    window.location = 'feedback.html'
     return
 }
 
